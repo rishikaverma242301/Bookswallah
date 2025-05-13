@@ -66,7 +66,7 @@ const trendingBooks = [
 
 const StarRating = ({ count }) => {
   return (
-    <div className="text-yellow-500 text-sm">
+    <div className='text-yellow-500 text-sm'>
       {[...Array(5)].map((_, i) => (
         <span key={i}>{i < count ? '★' : '☆'}</span>
       ))}
@@ -76,34 +76,34 @@ const StarRating = ({ count }) => {
 
 const NowTrending = () => {
   return (
-    <div className="px-6 py-8 bg-white">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800">BW Top Books</h2>
-        <a href="#" className="text-red-500 font-medium hover:underline">See All</a>
+    <div className='px-6 py-8 bg-white'>
+      <div className='flex justify-between items-center mb-6'>
+        <h2 className='text-2xl font-semibold text-gray-800'>BW Top Books</h2>
+        <a href="#" className='text-red-500 font-medium hover:underline'>See All</a>
       </div>
 
-      <div className="flex gap-6 overflow-x-auto">
+      <div className='flex gap-6 overflow-x-auto'>
         {trendingBooks.map((book, idx) => (
-          <div key={idx} className="w-40 shrink-0 text-center">
-            <div className="relative">
-              <img src={book.img} alt={book.title} className="rounded shadow-md w-full h-52 object-cover" />
+          <div key={idx} className='w-40 shrink-0 text-center'>
+            <div className='relative'>
+              <img src={book.img} alt={book.title} className='rounded shadow-md w-full h-52 object-cover' />
               {book.discount && (
-                <div className="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold rounded-full px-2 py-1">
+                <div className='absolute top-0 right-0 bg-red-600 text-white text-xs font-bold rounded-full px-2 py-1'>
                   {book.discount}
                 </div>
               )}
             </div>
-            <h4 className="mt-2 text-sm font-medium text-gray-700">{book.title}</h4>
-            <p className="text-xs text-gray-500">{book.author}</p>
+            <h4 className='mt-2 text-sm font-medium text-gray-700'>{book.title}</h4>
+            <p className='text-xs text-gray-500'>{book.author}</p>
             <StarRating count={book.rating} />
-            <div className="mt-1 text-sm">
-              <span className="text-red-600 font-semibold">{book.price}</span>
+            <div className='mt-1 text-sm'>
+              <span className='text-red-600 font-semibold'>{book.price}</span>
               {book.originalPrice && (
-                <span className="text-gray-400 ml-1 line-through">{book.originalPrice}</span>
+                <span className='text-gray-400 ml-1 line-through'>{book.originalPrice}</span>
               )}
             </div>
             {book.rating === 0 && (
-              <p className="text-xs text-gray-400 italic mt-1">No Review Yet</p>
+              <p className='text-xs text-gray-400 italic mt-1'>No Review Yet</p>
             )}
           </div>
         ))}

@@ -93,17 +93,17 @@ const NowTrending = () => {
                 </div>
               )}
             </div>
-            <h4 className="mt-2 text-sm font-medium text-gray-700">{book.title}</h4>
-            <p className="text-xs text-gray-500">{book.author}</p>
+            <h4 className='mt-2 text-sm font-medium text-gray-700'>{book.title}</h4>
+            <p className='text-xs text-gray-500'>{book.author}</p>
             <StarRating count={book.rating} />
-            <div className="mt-1 text-sm">
+            <div className='mt-1 text-sm'>
               <span className="text-red-600 font-semibold">{book.price}</span>
               {book.originalPrice && (
                 <span className="text-gray-400 ml-1 line-through">{book.originalPrice}</span>
               )}
             </div>
             {book.rating === 0 && (
-              <p className="text-xs text-gray-400 italic mt-1">No Review Yet</p>
+              <p className='text-xs text-gray-400 italic mt-1'>No Review Yet</p>
             )}
           </div>
         ))}
